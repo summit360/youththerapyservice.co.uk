@@ -1,52 +1,78 @@
-###
-# Compass
-###
 
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
 
-###
-# Page options, layouts, aliases and proxies
-###
+set :site_url, "http://www.youththerapyservice.co.uk"
+set :site_description, "Youth Therapy Services Sheffield"
 
-# Per-page layout changes:
-#
-# With no layout
-# page "/path/to/file.html", :layout => false
-#
-# With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
+# For custom domains on github pages
+page "CNAME", layout: false
 
-# Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
-#  :which_fake_page => "Rendering a fake page with a local variable" }
+page "/sitemap.xml", layout: false
+
+page "/*", layout: 'page'
+page "/articles/*", :layout => "article"
+page "/articles/", layout: "page"
+page "/", layout: 'layout'
+
+set :url_root, site_url
+
+activate :search_engine_sitemap
+
+activate :breadcrumbs
+
+activate :meta_tags
+
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-71483613-1' # Replace with your property ID.
+  # Tracking in development environment (default = true)
+  ga.development = false
+end
 
 ###
 # Helpers
 ###
+require "lib/custom_helpers"
+helpers CustomHelpers
+
+require 'bootstrap-sass'
 
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
+
+activate :directory_indexes
+
+set :relative_links, true
 
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
 end
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+activate :blog do |blog|
+  # blog.prefix = "articles"
 
+  blog.sources = "articles/{year}-{month}-{day}-{title}.html"
+  blog.taglink = "tag/{tag}.html"
+
+  blog.permalink = "articles/{title}.html"
+  blog.summary_separator = /SPLIT_SUMMARY_BEFORE_THIS/
+
+  blog.paginate = true
+  blog.page_link = "p{num}"
+  blog.per_page = 20
+end
+
+
+
+set :css_dir, 'stylesheets'
+
+set :js_dir, 'javascripts'
+
+set :images_dir, 'images'
+
+
+#
+## DEPLOY
+#
 activate :deploy do |deploy|
   deploy.build_before = true # default: false
 
@@ -57,12 +83,6 @@ activate :deploy do |deploy|
   # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
   # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
 end
-
-set :css_dir, 'stylesheets'
-
-set :js_dir, 'javascripts'
-
-set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
@@ -78,6 +98,11 @@ configure :build do
   # Use relative URLs
   activate :relative_assets
 
+  # Minify HTML on build
+  activate :minify_html
+
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+
+
 end

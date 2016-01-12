@@ -1,0 +1,62 @@
+
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="tagline hidden-xs">
+      <div class="container">
+        <div class="row ">
+          <div class="col-sm-3">
+            <div class="phone text-center">
+              <a href="tel:+441143602180">
+              <i class="fa fa-phone"></i> 0114 123 456
+            </a>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="email text-center">
+              <a href="mailto:graham@youththerapyservices.co.uk">
+                <i class="fa fa-envelope"></i> graham@youththerapyservices.co.uk
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-1">
+
+            <div class="pull-right">
+              <ul class="top_socials">
+                <li><a href="https://www.facebook.com/youththreapyservice" target="_new"><i class="fa fa-facebook"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <%= tag :img, src: "/images/YTS-logo.png" %>
+          Youth Therapy Services
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="<%=is_page_active('/') %>">
+          <%= link_to 'Home', '/' %>
+        </li>
+        <li class="<%=is_page_active('/about/') %>">
+          <%= link_to 'About', '/about/' %>
+        </li>
+        <li class="<%=is_page_active('/articles/') %>">
+          <%= link_to 'Articles', '/articles/' %>
+        </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+    <!--/.container-fluid -->
+  </nav>
+

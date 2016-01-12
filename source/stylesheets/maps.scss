@@ -1,0 +1,37 @@
+//maps.scss
+.maps-section {
+    padding: 0;
+}
+
+.maps-row {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding: 0;
+}
+
+.maps-image, .maps-text {
+    width: 50%;
+    display: table-cell;
+    float: none !important;
+}
+.maps-image {
+    // padding-top: 37.5%;
+    position: relative;
+    overflow: hidden;
+}
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.maps-text {
+    vertical-align: middle;
+    padding: 90px 60px;
+}

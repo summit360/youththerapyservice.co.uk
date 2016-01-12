@@ -1,0 +1,40 @@
+---
+pageable: true
+per_page: 5
+title: Articles
+description: 'Powerful website full of best practices and keywords'
+
+---
+
+
+<h2>ARTICLES</h2>
+<% if paginate && num_pages > 1 %>
+  <p>Page <%= page_number %> of <%= num_pages %></p>
+
+<% end %>
+
+<% page_articles.each_with_index do |article, i| %>
+  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
+  <!-- use article.summary(250) if you have Nokogiri available to show just
+       the first 250 characters -->
+  <%= article.data['summary'] %>
+<% end %>
+
+<% if paginate %>
+<nav>
+  <ul class="pager">
+    <% if prev_page %>
+    <li>
+
+      <%= link_to 'Previous page', prev_page %>
+    </li>
+    <% end %>
+    <% if next_page %>
+    <li>
+
+      <%= link_to 'Next page', next_page %>
+    </li>
+    <% end %>
+  </ul>
+</nav>
+<% end %>

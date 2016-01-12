@@ -1,0 +1,13 @@
+<% wrap_layout :layout do %>
+
+<div class="main">
+    <div class="container" style="">
+      <%= partial "layouts/breadcrumbs" %>
+
+      <h2><%= current_article.title %> </h2>
+      <%= yield %>
+
+    </div>
+  </div>
+
+<% end %>
