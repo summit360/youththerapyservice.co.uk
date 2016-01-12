@@ -1,7 +1,7 @@
 
 
 set :site_url, "http://www.youththerapyservice.co.uk"
-set :site_description, "Youth Therapy Services Sheffield"
+set :site_description, "Youth Therapy Service Sheffield"
 
 # For custom domains on github pages
 page "CNAME", layout: false
