@@ -13,6 +13,7 @@ gem 'middleman-deploy', '~> 1.0'
 # Blog extension for Middleman
 gem "middleman-blog"
 gem "nokogiri"
+gem 'redcarpet'
 
 # Middleman Sitemap Builder
 gem 'middleman-search_engine_sitemap'

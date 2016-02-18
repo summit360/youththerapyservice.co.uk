@@ -17,6 +17,8 @@ page "/", layout: 'layout'
 
 set :url_root, site_url
 
+set :markdown_engine, :redcarpet
+
 activate :search_engine_sitemap
 
 activate :breadcrumbs

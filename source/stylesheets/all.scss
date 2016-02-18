@@ -7,3 +7,253 @@
 @import "footer";
 
 @import "custom";
+
+
+/* general styles */
+html {
+  height: 100%;
+  width: 100%;
+}
+.index {
+  height: 100%;
+  width: 100%;
+}
+.contact_index {
+
+}
+
+/* padded section */
+.pad-section {
+  padding: 50px 0;
+}
+.pad-section-100 {
+  padding-top: 100px;
+}
+.pad-section img {
+  // width: 100%;
+}
+
+.text-top-100 {
+  // display: table-cell;
+  padding-top: 100px;
+}
+/* vertical-centered text */
+.text-vcenter {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.img-responsive2 {
+    display: inline-block !important;
+    max-width: 20%;
+    height: auto;
+}
+
+.white-text {
+  color: #fff;
+}
+.orange-text {
+    color: #ff9800!important;
+}
+
+.btn-standout {
+  background-color: #000000;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+/* additional sections */
+#contact {
+  margin-top:60px;
+}
+
+.landing-section{
+  h1 {
+    margin-top:50px;
+  }
+  @media (min-width: $screen-sm-min) {
+    h1 {
+      margin-top: 80px;
+    }
+  }
+  @media (min-width: $screen-md-min) {
+    h1 {
+      margin-top: 125px;
+    }
+  }
+}
+
+#home {
+  margin-top: -21px;
+  background: url(/images/backgrounds/l-4.JPG) no-repeat center center fixed;
+  display: table;
+  height: 70%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+#services {
+  margin-top: -21px;
+  background: url(/images/backgrounds/l-8.JPG) no-repeat center center fixed;
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+}
+#background {
+  margin-top: -21px;
+  background: url(/images/backgrounds/l-10.JPG) no-repeat center center fixed;
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+}
+#confidentiality {
+  margin-top: -21px;
+  background: url(/images/backgrounds/l-2.JPG) no-repeat center center fixed;
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+}
+
+.bg_gradient {
+    float: left;
+    width:100%;
+    opacity: .8;
+    background: -webkit-linear-gradient(left,$brand-primary,#1d1d1d);
+    background: -o-linear-gradient(left,$brand-primary,#000);
+    background: -moz-linear-gradient(left,$brand-primary,#000);
+    background: linear-gradient(left,$brand-primary,#000);
+}
+
+.wrapper {
+
+  margin-bottom: 50px;
+
+  @media (min-width: $screen-sm-min) {
+    margin-bottom: 80px;
+  }
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: $screen-md-min) {
+      margin-bottom: 125px;
+      float: right!important;
+      float: left;
+      display: block;
+      margin-right: 1.46678%;
+      width: 57.72217%;
+      text-align: center;
+  }
+}
+.wrapper:last-child {
+    margin-right: 0;
+}
+
+#about {
+}
+
+#services {
+  background-color: #306d9f;
+  color: #ffffff;
+}
+#services .glyphicon {
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 60px;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+  vertical-align: middle;
+  width: 140px;
+}
+
+#information {
+  background: url(/images/bg-02.jpg) no-repeat center center fixed;
+  display: table;
+  height: 800px;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#information .panel {
+  opacity: 0.85;
+}
+
+#google_map {
+  height: 500px;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+}
+footer .glyphicon {
+  color: #333333;
+  font-size: 60px;
+}
+footer .glyphicon:hover {
+  color: #306d9f;
+}
+
+.credits {
+  text-align: center;
+  size: 0.8em;
+}
+
+
+//Tagline Effects
+.tagline {
+  background-color: #eee;
+}
+.top_socials {
+    margin: 0 12px;
+}
+.top_socials li {
+    width: 30px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 0;
+    padding: 0;
+}
+.tagline a {
+    display: block;
+    color: #334159;
+    line-height: 44px;
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    text-align: center;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 400;
+}

@@ -1,6 +1,6 @@
 
 
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar">
     <div class="tagline hidden-xs">
       <div class="container">
         <div class="row ">
@@ -38,7 +38,9 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="/">
-          <%= tag :img, src: "/images/YTS-logo.png" %>
+
+            <%= tag :img, src: "/images/YTS-logo.png", class:"hidden-xs" %>
+
           Youth Therapy Service
         </a>
       </div>
@@ -47,12 +49,19 @@
           <li class="<%=is_page_active('/') %>">
           <%= link_to 'Home', '/' %>
         </li>
-        <!-- <li class="<%=is_page_active('/about/') %>">
-          <%= link_to 'About', '/about/' %>
+        <li class="<%=is_page_active('/services/') %>">
+          <%= link_to 'Services', '/services/' %>
+        </li>
+        <li class="<%=is_page_active('/background/') %>">
+          <%= link_to 'Background', '/background/' %>
         </li>
         <li class="<%=is_page_active('/articles/') %>">
           <%= link_to 'Articles', '/articles/' %>
-        </li> -->
+        </li>
+        <li class="<%=is_page_active('/confidentiality/') %>">
+          <%= link_to 'Confidentiality', '/confidentiality/' %>
+        </li>
+
         <li class="<%=is_page_active('/about/') %>">
         <%= link_to 'Contact', '/contact-us/' %>
       </li>
