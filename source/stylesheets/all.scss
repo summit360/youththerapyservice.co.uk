@@ -73,6 +73,11 @@ html {
 .landing-section{
   h1 {
     margin-top:50px;
+    text-shadow:
+      -1px -1px 0 $gray-darker,
+      1px -1px 0 $gray-darker,
+      -1px 1px 0 $gray-darker,
+      1px 1px 0 $gray-darker;
   }
   @media (min-width: $screen-sm-min) {
     h1 {
@@ -99,12 +104,14 @@ html {
   -o-background-size: cover;
   background-size: cover;
 
+  padding-bottom:50px;
+
 }
 
 #services {
   margin-top: -21px;
-  background: url(/images/backgrounds/l-8.jpg) no-repeat center center fixed;
-  // background-position: right bottom;
+  background: url(/images/backgrounds/l-8.jpg) no-repeat top center fixed;
+  // background-position: center bottom;
   display: table;
   height: 100%;
   position: relative;
@@ -118,8 +125,8 @@ html {
 }
 #background {
   margin-top: -21px;
-  background: url(/images/backgrounds/l-10.jpg) no-repeat center center fixed;
-  // background-position: right top;
+  background: url(/images/backgrounds/l-10.jpg) no-repeat bottom center fixed;
+  // background-position: center bottom;
   display: table;
   height: 100%;
   position: relative;
@@ -133,8 +140,8 @@ html {
 }
 #confidentiality {
   margin-top: -21px;
-  background: url(/images/backgrounds/l-2.jpg) no-repeat center center fixed;
-  // background-position: right bottom;
+  background: url(/images/backgrounds/l-2.jpg) no-repeat bottom center fixed;
+  // background-position: center bottom;
   display: table;
   height: 100%;
   position: relative;
@@ -150,7 +157,7 @@ html {
 .bg_gradient {
     float: left;
     width:100%;
-    opacity: .8;
+    opacity: .75;
     background: -webkit-linear-gradient(left,$brand-primary,#1d1d1d);
     background: -o-linear-gradient(left,$brand-primary,#000);
     background: -moz-linear-gradient(left,$brand-primary,#000);
@@ -158,9 +165,7 @@ html {
 }
 
 .wrapper {
-
   margin-bottom: 50px;
-
   @media (min-width: $screen-sm-min) {
     margin-bottom: 80px;
   }
